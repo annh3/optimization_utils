@@ -1,8 +1,7 @@
 import numpy as np
 
-def cem(F,num_iters,N,d,sigma=0.1,alpha=0.001):
+def cem(F,fixed_w,num_iters,N,d,sigma=0.1,alpha=0.001):
 
-	fixed_w = np.array([0.1, -0.3, 0.5])
 	mu = np.random.randn(d)
 
 	sigma = 0.1
@@ -15,7 +14,7 @@ def cem(F,num_iters,N,d,sigma=0.1,alpha=0.001):
         	(i, str(mu), str(fixed_w), F(fixed_w,mu)))
     	noise = np.random.normal(size=(N,d))
     	x_guesses = mu + sigma*noise
-    	Fs = F(fixed_w, x_guesses)
+    	Fs = F(fixed_w, x_guesses) # to do - rewrite "fixed_w" as a parameter dictionary
 
     	# normalize scores
     	# X = X - mu
