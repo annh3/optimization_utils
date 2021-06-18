@@ -15,7 +15,7 @@ def conjugate_gradient(A,b,tol):
         r = r_old - alpha * A @ p
         if np.linalg.norm(r) < tol:
             return x
-        Beta = r.T @ r / r_old.T @ r_old
+        Beta = float(r.T @ r) / float(r_old.T @ r_old)
         p = r + Beta * p
         k = k + 1
         if k > 10 * b.shape[0]:
