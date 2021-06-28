@@ -1,4 +1,4 @@
-# Optimization Utils
+# Optimization and Statistics Utils
 
 Implemented common optimization algorithms that are used as subroutines:
 
