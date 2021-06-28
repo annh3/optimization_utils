@@ -7,3 +7,5 @@ Implemented common optimization algorithms that are used as subroutines:
 3. Backtracking Line Search
 
 To-Do:
+
+4. ANOVA (analysis of variance)
